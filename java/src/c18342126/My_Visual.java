@@ -1,11 +1,12 @@
 package c18342126;
 
-import java.util.ArrayList;
+
 
 import ie.tudublin.*;
 
 public class My_Visual extends Visual {
-    ArrayList<Dots> dots = new ArrayList <Dots> ();
+    Dots dots;
+    
 
     public void settings() {
         size(1200, 800);
@@ -16,10 +17,8 @@ public class My_Visual extends Visual {
         startMinim();
         loadAudio("Plakala.mp3"); 
         
-        
-        
-        
-        
+        dots = new Dots(this);
+
     }
 
 
@@ -47,36 +46,9 @@ public class My_Visual extends Visual {
         {
             e.printStackTrace();
         }
-               
-        for(int i = 0; i < 20; i++) {
-            Dots dot = new Dots(this);
-            dots.add(dot);
-
-
-            if(dots.size() > 300) {
-
-                for(int j = 0; j < dots.size() - 1; j++) {
-                    dots.remove(j);
-                }
-                
-            }
-        }
-        
-    
-        
-        
-
-     
 
         
-        for(Dots d : dots) {
-            d.render();
-            d.moveDots();
-        }
-
-        
-        
-
+        dots.render();
     }
 
     //method to close Minim audio classes when done with them

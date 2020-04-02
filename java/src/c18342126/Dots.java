@@ -1,45 +1,63 @@
 package c18342126;
 
 import processing.core.*;
+import java.util.ArrayList;
 
 public class Dots {
     My_Visual mv;
     float diam;
     PVector location;
     PVector velocity;
+    ArrayList<Dots> dots;
 
 
     
 
     public Dots(My_Visual mv) {
         this.mv = mv; 
-        this.diam = mv.random(20, 30);
+        this.diam = 5;
         velocity = new PVector(2, 0);
         location = new PVector(mv.random(mv.width), mv.random(mv.height));
+        dots = new ArrayList <Dots> ();
     }
 
     public void moveDots() {
         location.add(velocity);
-
-
-        //check 
-        if(location.x > mv.random(mv.width * 0.8f, mv.width * 0.9f)) {
-            
-
-            if(this.diam == 0) {
-                this.diam = 0;
-            } else { 
-                this.diam -= 5;
-            }
-        }
     }
+
+
+
         
     
 
     public void render() {
-        mv.noStroke();
-        mv.fill(255, 200);
-        mv.ellipse(location.x, location.y, diam, diam);
+        // mv.colorMode(mv.HSB);
+        
+        
+        Dots dot = new Dots(mv);
+        dots.add(dot);
+        
+
+
+        for(int i = 0; i < dots.size(); i++) {
+            mv.noStroke();
+
+            if(dots.size() > 20) {
+                for(int j = 0; j < dots.size(); j++) {
+                    dots.remove(j);
+                }
+            }
+            
+            mv.ellipse(dots.get(i).location.x, dots.get(i).location.y, diam, diam);
+            dots.get(i).moveDots();
+
+            
+            if(dots.get(i).location.x > mv.random((mv.width * 0.9f), mv.width)) {
+                
+                dots.remove(i);
+            }
+            
+        }
     }
 }
 
