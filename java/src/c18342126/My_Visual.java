@@ -1,10 +1,11 @@
 package c18342126;
 
+import java.util.ArrayList;
+
 import ie.tudublin.*;
 
 public class My_Visual extends Visual {
-    Dots dots;
-
+    ArrayList<Dots> dots = new ArrayList <Dots> ();
 
     public void settings() {
         size(1200, 800);
@@ -14,8 +15,10 @@ public class My_Visual extends Visual {
         setFrameSize(512);
         startMinim();
         loadAudio("Plakala.mp3"); 
-
-        dots = new Dots(this);
+        
+        
+        
+        
         
     }
 
@@ -34,7 +37,7 @@ public class My_Visual extends Visual {
 
     public void draw() {
         background(196, 0, 240);
-        
+
         try
         {
             // Call this if you want to use FFT data
@@ -44,10 +47,35 @@ public class My_Visual extends Visual {
         {
             e.printStackTrace();
         }
+               
+        for(int i = 0; i < 20; i++) {
+            Dots dot = new Dots(this);
+            dots.add(dot);
+
+
+            if(dots.size() > 300) {
+
+                for(int j = 0; j < dots.size() - 1; j++) {
+                    dots.remove(j);
+                }
                 
+            }
+        }
         
-        dots.render();
-        dots.moveDots();
+    
+        
+        
+
+     
+
+        
+        for(Dots d : dots) {
+            d.render();
+            d.moveDots();
+        }
+
+        
+        
 
     }
 
