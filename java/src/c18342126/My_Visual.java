@@ -17,6 +17,7 @@ public class My_Visual extends Visual {
         startMinim();
         loadAudio("Plakala.mp3"); 
         
+
         dots = new Dots(this);
 
     }
@@ -35,12 +36,15 @@ public class My_Visual extends Visual {
 
 
     public void draw() {
-        background(196, 0, 240);
+        background(135, 21, 150);
 
         try
         {
             // Call this if you want to use FFT data
             calculateFFT(); 
+            calculateFrequencyBands();
+            calculateAverageAmplitude(); 
+            dots.render();
         }
         catch(VisualException e)
         {
@@ -48,7 +52,7 @@ public class My_Visual extends Visual {
         }
 
         
-        dots.render();
+        
     }
 
     //method to close Minim audio classes when done with them
