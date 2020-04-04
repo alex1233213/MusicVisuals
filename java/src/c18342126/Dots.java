@@ -33,18 +33,17 @@ public class Dots {
     
 
     public void render() {
-        mv.noStroke();
         mv.fill(255, 200);
 
         for(int i = 0; i < mv.getBands().length; i++) {
             
             Dots dot = new Dots(mv);
             dots.add(dot);
-            System.out.println(mv.getBands()[i]); 
+            // System.out.println(mv.getBands()[i]); 
             
 
-
             mv.circle(dots.get(i).location.x, dots.get(i).location.y, mv.getBands()[i] * 0.1f);
+
             dots.get(i).moveDots();
 
             

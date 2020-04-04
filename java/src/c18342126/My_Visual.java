@@ -1,12 +1,10 @@
 package c18342126;
 
-
-
 import ie.tudublin.*;
 
 public class My_Visual extends Visual {
     Dots dots;
-    
+    Star s;
 
     public void settings() {
         size(1200, 800);
@@ -15,11 +13,11 @@ public class My_Visual extends Visual {
     public void setup() {
         setFrameSize(512);
         startMinim();
-        loadAudio("Plakala.mp3"); 
+        loadAudio("Dissolve.mp3"); 
         
 
-        dots = new Dots(this);
-
+        // dots = new Dots(this);
+        s = new Star(this);
     }
 
 
@@ -36,7 +34,7 @@ public class My_Visual extends Visual {
 
 
     public void draw() {
-        background(135, 21, 150);
+        background(0);
 
         try
         {
@@ -44,15 +42,15 @@ public class My_Visual extends Visual {
             calculateFFT(); 
             calculateFrequencyBands();
             calculateAverageAmplitude(); 
-            dots.render();
+            // pS.render();
+            // dots.render();
+            s.render();
         }
         catch(VisualException e)
         {
             e.printStackTrace();
         }
 
-        
-        
     }
 
     //method to close Minim audio classes when done with them
