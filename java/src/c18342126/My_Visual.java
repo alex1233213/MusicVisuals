@@ -16,8 +16,9 @@ public class My_Visual extends Visual {
         loadAudio("Dissolve.mp3"); 
         
 
-        // dots = new Dots(this);
+        dots = new Dots(this);
         s = new Star(this);
+
     }
 
 
@@ -34,7 +35,7 @@ public class My_Visual extends Visual {
 
 
     public void draw() {
-        background(0);
+        
 
         try
         {
@@ -42,15 +43,18 @@ public class My_Visual extends Visual {
             calculateFFT(); 
             calculateFrequencyBands();
             calculateAverageAmplitude(); 
-            // pS.render();
-            // dots.render();
-            s.render();
+            
+            
+            
         }
         catch(VisualException e)
         {
             e.printStackTrace();
         }
 
+
+        s.render();
+        dots.render();
     }
 
     //method to close Minim audio classes when done with them

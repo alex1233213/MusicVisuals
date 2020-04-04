@@ -17,7 +17,8 @@ public class Dots {
         this.mv = mv; 
         // this.diam = mv.random(5, 10);
         velocity = new PVector(0.5f, 0);
-        location = new PVector(mv.random(mv.width), mv.random(mv.height));
+        location = new PVector(mv.random(mv.width * 0.1f, mv.width * 0.3f),
+                                 mv.random(mv.height * 0.25f, mv.height * 0.9f));
         dots = new ArrayList <Dots> ();
     }
 
@@ -33,16 +34,17 @@ public class Dots {
     
 
     public void render() {
+        mv.translate(0, 0);
         mv.fill(255, 200);
 
-        for(int i = 0; i < mv.getBands().length; i++) {
+        for(int i = 0; i < 20; i++) {
             
             Dots dot = new Dots(mv);
             dots.add(dot);
             // System.out.println(mv.getBands()[i]); 
             
 
-            mv.circle(dots.get(i).location.x, dots.get(i).location.y, mv.getBands()[i] * 0.1f);
+            mv.circle(dots.get(i).location.x, dots.get(i).location.y, mv.getSmoothedAmplitude() * 50f);
 
             dots.get(i).moveDots();
 
@@ -50,11 +52,15 @@ public class Dots {
             
             
             
-            if(dots.get(i).location.x > mv.random(mv.width * 0.75f, mv.width * 0.9f)) {
+            if(dots.get(i).location.x > mv.random(mv.width * 0.3f, mv.width * 0.32f)) {
                 dots.remove(i);
                 i--;
             }
+
+            
         }
+
+
     }
 }
 
