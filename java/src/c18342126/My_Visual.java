@@ -5,6 +5,7 @@ import ie.tudublin.*;
 public class My_Visual extends Visual {
     Dots dots;
     Star s;
+    Triangles t;
 
     public void settings() {
         size(1200, 800);
@@ -18,6 +19,7 @@ public class My_Visual extends Visual {
 
         dots = new Dots(this);
         s = new Star(this);
+        t = new Triangles(this);
 
     }
 
@@ -43,8 +45,8 @@ public class My_Visual extends Visual {
             calculateFFT(); 
             calculateFrequencyBands();
             calculateAverageAmplitude(); 
-            
-            
+            t.render();
+            dots.render();
             
         }
         catch(VisualException e)
@@ -52,9 +54,10 @@ public class My_Visual extends Visual {
             e.printStackTrace();
         }
 
-
-        s.render();
-        dots.render();
+        
+        
+        // dots.render();
+        
     }
 
     //method to close Minim audio classes when done with them
