@@ -14,7 +14,7 @@ public class My_Visual extends Visual {
     public void setup() {
         setFrameSize(512);
         startMinim();
-        loadAudio("Dissolve.mp3"); 
+        loadAudio("LANDR-Voices-High-Balanced.wav"); 
         
 
         dots = new Dots(this);

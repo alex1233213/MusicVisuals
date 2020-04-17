@@ -43,9 +43,12 @@ public class Dots {
             Dots dot = new Dots(mv);
             dots.add(dot);
             // System.out.println(mv.getBands()[i]); 
-            
+            mv.pushMatrix();
+            mv.translate(mv.width / 2, mv. height / 5);
+            mv.circle(dots.get(i).location.x, dots.get(i).location.y, mv.getSmoothedAmplitude() * 500f);
+            mv.popMatrix();
 
-            mv.circle(dots.get(i).location.x, dots.get(i).location.y, mv.getSmoothedAmplitude() * 50f);
+            
 
             dots.get(i).moveDots();
 
