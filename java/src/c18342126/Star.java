@@ -81,6 +81,7 @@ public class Star {
             this.inner_radius += mv.getAmplitude() / 6;
             
             
+            
 
             mv.popMatrix();
         }
