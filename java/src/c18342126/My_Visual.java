@@ -15,7 +15,7 @@ public class My_Visual extends Visual {
         setFrameSize(512);
         startMinim();
         loadAudio("LANDR-Voices-High-Balanced.wav"); 
-        
+        colorMode(HSB);
 
         dots = new Dots(this);
         s = new Star(this);
