@@ -36,6 +36,7 @@ public class Dots {
     public void render() {
         mv.translate(0, 0);
         mv.fill(255, 200);
+        mv.noStroke();
 
         for(int i = 0; i < 20; i++) {
             

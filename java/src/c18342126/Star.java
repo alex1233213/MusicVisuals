@@ -80,8 +80,6 @@ public class Star {
 
             mv.popMatrix();
 
-
-            //rotate based on frequency bands
         }
 
         

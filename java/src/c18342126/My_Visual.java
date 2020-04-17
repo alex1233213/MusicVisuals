@@ -47,7 +47,7 @@ public class My_Visual extends Visual {
             calculateAverageAmplitude(); 
             t.render();
             dots.render();
-            
+            s.render();
         }
         catch(VisualException e)
         {
