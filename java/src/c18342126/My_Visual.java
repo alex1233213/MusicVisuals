@@ -16,6 +16,7 @@ public class My_Visual extends Visual {
         startMinim();
         loadAudio("LANDR-Voices-High-Balanced.wav"); 
         colorMode(HSB);
+        background(0);
 
         dots = new Dots(this);
         s = new Star(this);
@@ -46,8 +47,8 @@ public class My_Visual extends Visual {
             calculateFrequencyBands();
             calculateAverageAmplitude(); 
             t.render();
-            dots.render();
-            s.render();
+            // dots.render();
+            // s.render();
         }
         catch(VisualException e)
         {

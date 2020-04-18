@@ -45,7 +45,7 @@ public class Dots {
             // System.out.println(mv.getBands()[i]); 
             mv.pushMatrix();
             mv.translate(0, 0);
-            mv.circle(dots.get(i).location.x, dots.get(i).location.y, mv.getSmoothedAmplitude() * 500f);
+            mv.circle(dots.get(i).location.x, dots.get(i).location.y, mv.getSmoothedAmplitude() * 50f);
             mv.popMatrix();
 
             
@@ -59,9 +59,7 @@ public class Dots {
             if(dots.get(i).location.x > mv.random(mv.width * 0.3f, mv.width * 0.32f)) {
                 dots.remove(i);
                 i--;
-            }
-
-            
+            }   
         }
 
 

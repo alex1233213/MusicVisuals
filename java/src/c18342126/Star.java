@@ -53,8 +53,7 @@ public class Star {
 
 
     public void render() {
-        mv.background(0);
-        mv.colorMode(PApplet.HSB);
+        // mv.colorMode(PApplet.HSB);
 
         
         float rotation = (PApplet.PI / 180);
