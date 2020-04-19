@@ -59,7 +59,7 @@ public class Star {
         float rotation = (PApplet.PI / 180);
         float shadeRatio = 255 / 100;
         int stars = 10;
-        float rotations = 10;
+        float rotations = 5;
         float inner_ratio = this.inner_radius / rotations;
         float outer_ratio = this.outer_radius / rotations;
         float rotation_ratio = 70 / rotations;
@@ -70,14 +70,15 @@ public class Star {
             mv.stroke(shadeRatio);
             // mv.fill(PApplet.map(i,0, mv.getAudioBuffer().get(i) * 10, 0, 255), 255, 255);
             mv.fill(c, 255 , 255);
+            
             mv.pushMatrix();
             mv.translate(mv.width/2, mv.height/2);
             mv.rotate(rotation_ratio * i * rotation);
             this.star(5, this.outer_radius * mv.getSmoothedAmplitude() * 20 - outer_ratio * i, 
-                      this.inner_radius * mv.getAmplitude() * 3 - inner_ratio * i);
+                      this.inner_radius * mv.getAmplitude() * 10 - inner_ratio * i);
             
-            this.outer_radius += mv.getAmplitude() / 2;
-            this.inner_radius += mv.getAmplitude() / 6;
+            // this.outer_radius += mv.getAmplitude() / 2;
+            // this.inner_radius += mv.getAmplitude() / 6;
             
 
             mv.popMatrix();
