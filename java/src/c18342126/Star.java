@@ -39,7 +39,7 @@ public class Star {
 
                 x = PApplet.cos(theta) * temp_rad;
                 y =  PApplet.sin(theta) * temp_rad;
-                z = mv.getAmplitude() * 100;
+                z = mv.getAmplitude() * 50;
                 mv.vertex(x, y, z);
                 theta += thetaRot;
             }
@@ -59,7 +59,7 @@ public class Star {
         float rotation = (PApplet.PI / 180);
         float shadeRatio = 255 / 100;
         int stars = 10;
-        float rotations = 5;
+        float rotations = 10;
         float inner_ratio = this.inner_radius / rotations;
         float outer_ratio = this.outer_radius / rotations;
         float rotation_ratio = 70 / rotations;

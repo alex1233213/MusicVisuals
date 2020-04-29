@@ -6,6 +6,7 @@ public class My_Visual extends Visual {
     Dots dots;
     Star s;
     Triangles t;
+    Spheres spheres;
 
     public void settings() {
         size(1200, 800, P3D);
@@ -21,6 +22,7 @@ public class My_Visual extends Visual {
         dots = new Dots(this);
         s = new Star(this);
         t = new Triangles(this);
+        spheres  = new Spheres(this);        
 
     }
 
@@ -49,6 +51,7 @@ public class My_Visual extends Visual {
             // t.render();
             // dots.render();
             s.render();
+            spheres.render();
         }
         catch(VisualException e)
         {
