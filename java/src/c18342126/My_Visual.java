@@ -46,18 +46,15 @@ public class My_Visual extends Visual {
             calculateFFT(); 
             calculateFrequencyBands();
             calculateAverageAmplitude(); 
-            t.render();
+            // t.render();
             // dots.render();
-            // s.render();
+            s.render();
         }
         catch(VisualException e)
         {
             e.printStackTrace();
         }
 
-        
-        
-        // dots.render();
         
     }
 
