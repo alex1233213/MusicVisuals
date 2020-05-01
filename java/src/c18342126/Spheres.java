@@ -4,13 +4,16 @@ import processing.core.PApplet;
 
 public class Spheres {
     My_Visual mv;
-    float[] radii;
+    
 
     public Spheres(My_Visual mv) {
         this.mv = mv;
-        radii = new float[20];
     }
 
+
+    public void setup() {
+        mv.setFrameSize(2048);
+    }
 
 
     public void render() {
@@ -18,8 +21,7 @@ public class Spheres {
             mv.fill(PApplet.map(i, 0, mv.getAmplitude() * 100, 0, 255), 255, 255);
             mv.pushMatrix();
             mv.translate(mv.width / 2, mv.height / 2);
-            this.radii[i] = mv.getAmplitude()  * 150;
-            mv.sphere(this.radii[i]);
+            mv.sphere(mv.getAmplitude()  * 170);
             mv.popMatrix();   
         }
     }

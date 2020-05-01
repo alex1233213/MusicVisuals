@@ -3,10 +3,10 @@ package c18342126;
 import ie.tudublin.*;
 
 public class My_Visual extends Visual {
-    Dots dots;
-    Star s;
+    Star star;
     Triangles t;
     Spheres spheres;
+    Circles circles;
 
     public void settings() {
         size(1200, 800, P3D);
@@ -17,13 +17,12 @@ public class My_Visual extends Visual {
         startMinim();
         loadAudio("LANDR-Voices-High-Balanced.wav"); 
         colorMode(HSB);
-        background(0);
+        
 
-        dots = new Dots(this);
-        s = new Star(this);
+        star = new Star(this);
         t = new Triangles(this);
         spheres  = new Spheres(this);        
-
+        circles = new Circles(this);
     }
 
 
@@ -40,7 +39,7 @@ public class My_Visual extends Visual {
 
 
     public void draw() {
-        
+        background(0);
 
         try
         {
@@ -48,10 +47,11 @@ public class My_Visual extends Visual {
             calculateFFT(); 
             calculateFrequencyBands();
             calculateAverageAmplitude(); 
-            // t.render();
-            // dots.render();
-            s.render();
+            
+            
+            star.render();
             spheres.render();
+            circles.render();
         }
         catch(VisualException e)
         {
@@ -63,7 +63,6 @@ public class My_Visual extends Visual {
 
     //method to close Minim audio classes when done with them
     public void stop() {
-        
         getAudioPlayer().close();
         getMinim().stop();
         super.stop();
