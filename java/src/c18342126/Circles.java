@@ -47,12 +47,17 @@ public class Circles {
             mv.strokeWeight(3.5f);
             mv.stroke(PApplet.map(i, 0, mv.getBands().length, 0 , 255), 255,255);
 
-
-
             mv.pushMatrix();
             mv.translate(mv.width / 2, mv.height / 2);
-            mv.circle(circles.get(i).location.x, circles.get(i).location.y, mv.getSmoothedBands()[i] * 10);
-            mv.popMatrix();   
+
+            
+            float rad = mv.getSmoothedBands()[i] * 10;
+
+            mv.circle(circles.get(i).location.x, 
+                    circles.get(i).location.y, rad);
+            
+            
+            mv.popMatrix();
             // circles.get(i).moveCircles();
         }
 
