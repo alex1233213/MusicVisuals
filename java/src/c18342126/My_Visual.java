@@ -4,7 +4,7 @@ import ie.tudublin.*;
 
 public class My_Visual extends Visual {
     Star star;
-    Triangles t;
+    Triangles triangles;
     Spheres spheres;
     Circles circles;
 
@@ -20,7 +20,7 @@ public class My_Visual extends Visual {
         
 
         star = new Star(this);
-        t = new Triangles(this);
+        triangles = new Triangles(this);
         spheres  = new Spheres(this);        
         circles = new Circles(this);
     }
@@ -49,9 +49,10 @@ public class My_Visual extends Visual {
             calculateAverageAmplitude(); 
             
             
-            star.render();
-            spheres.render();
-            circles.render();
+            // star.render();
+            // spheres.render();
+            // circles.render();
+            triangles.render();
         }
         catch(VisualException e)
         {
