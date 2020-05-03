@@ -74,7 +74,6 @@ public class Star {
             mv.pushMatrix();
             mv.translate(mv.width/2, mv.height/2);
             mv.rotate(rotation_ratio * i * rotation);
-            mv.rotateZ(rotation_ratio * i * rotation);
             this.star(5, this.outer_radius * mv.getSmoothedAmplitude() * 20 - outer_ratio * i, 
                       this.inner_radius * mv.getAmplitude() * 10 - inner_ratio * i);
             

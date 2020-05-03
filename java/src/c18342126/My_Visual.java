@@ -9,7 +9,7 @@ public class My_Visual extends Visual {
     Circles circles;
 
     public void settings() {
-        size(1200, 800, P3D);
+        size(1200, 800);
     }
 
     public void setup() {
@@ -49,10 +49,10 @@ public class My_Visual extends Visual {
             calculateAverageAmplitude(); 
             
             
-            // star.render();
+            star.render();
             // spheres.render();
             // circles.render();
-            triangles.render();
+            // triangles.render();
         }
         catch(VisualException e)
         {
