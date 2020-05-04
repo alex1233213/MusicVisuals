@@ -39,10 +39,8 @@ public class Triangles {
         mv.noFill();
         
         mv.strokeWeight(3.5f);
-        mv.stroke(255);
 
-        // float distance = mv.getSmoothedAmplitude() * 1000;
-        float rotateAngle = PApplet.TWO_PI / 4;
+        
 
         
 
@@ -52,7 +50,7 @@ public class Triangles {
         for(int i = 0 ; i < mv.getBands().length ; ++i) {
             mv.stroke(PApplet.map(i, 0, mv.getBands().length, 0 , 255),255, 255);
             mv.rotate(PApplet.radians(angle));
-            createTriangle(mv.getBands()[i] * 10);
+            createTriangle(mv.getSmoothedBands()[i]);
             angle += 0.05;
         }
         mv.popMatrix();

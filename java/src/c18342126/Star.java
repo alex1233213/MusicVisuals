@@ -39,8 +39,7 @@ public class Star {
 
                 x = PApplet.cos(theta) * temp_rad;
                 y =  PApplet.sin(theta) * temp_rad;
-                z = mv.getAmplitude() * 50;
-                mv.vertex(x, y, z);
+                mv.vertex(x, y);
                 theta += thetaRot;
             }
         }
@@ -56,29 +55,26 @@ public class Star {
     public void render() {
 
         
-        float rotation = (PApplet.PI / 180);
+        float rotation = (PApplet.PI / PApplet.radians(20));
         float shadeRatio = 255 / 100;
         int stars = 10;
-        float rotations = 10;
+        float rotations = 20;
         float inner_ratio = this.inner_radius / rotations;
         float outer_ratio = this.outer_radius / rotations;
-        float rotation_ratio = 70 / rotations;
-
+        float rotation_ratio = 100 / rotations;
+        
         
         for(int i = 0; i < stars; i++) {
-            float c = PApplet.map(i,0, mv.getAmplitude() * 50, 0, 255);
+            float c = PApplet.map(i,0, stars, 0, 255);
             mv.stroke(shadeRatio);
             // mv.fill(PApplet.map(i,0, mv.getAudioBuffer().get(i) * 10, 0, 255), 255, 255);
             mv.fill(c, 255 , 255);
             
             mv.pushMatrix();
             mv.translate(mv.width/2, mv.height/2);
-            mv.rotate(rotation_ratio * i * rotation);
-            this.star(5, this.outer_radius * mv.getSmoothedAmplitude() * 20 - outer_ratio * i, 
+            mv.rotate(rotation_ratio  * rotation * i);
+            this.star(i, this.outer_radius * mv.getSmoothedAmplitude() * 20 - outer_ratio * i, 
                       this.inner_radius * mv.getAmplitude() * 10 - inner_ratio * i);
-            
-            // this.outer_radius += mv.getAmplitude() / 2;
-            // this.inner_radius += mv.getAmplitude() / 6;
             
 
             mv.popMatrix();

@@ -9,7 +9,7 @@ public class My_Visual extends Visual {
     Circles circles;
 
     public void settings() {
-        size(1200, 800);
+        size(1200, 800, P3D);
     }
 
     public void setup() {
@@ -50,9 +50,9 @@ public class My_Visual extends Visual {
             
             
             star.render();
-            // spheres.render();
-            // circles.render();
-            // triangles.render();
+            spheres.render();
+            circles.render();
+            triangles.render();
         }
         catch(VisualException e)
         {
