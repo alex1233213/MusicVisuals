@@ -50,8 +50,8 @@ public class My_Visual extends Visual {
             
             
             star.render();
-            spheres.render();
-            circles.render();
+            // spheres.render();
+            // circles.render();
         }
         catch(VisualException e)
         {
