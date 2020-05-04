@@ -15,11 +15,7 @@ public class Main
 		System.out.println("Hello");
 	}
 
-	// public void dots() {
-	// 	String[] b = {"MAIN"};
-	// 	processing.core.PApplet.runSketch(b, new Dots());
-	// }
-
+	
 	public static void main(String[] args)
 	{
 		Main main = new Main();

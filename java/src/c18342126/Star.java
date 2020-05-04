@@ -25,7 +25,7 @@ public class Star {
         int no_vertexes = points * 2;
         float thetaRot = PApplet.TWO_PI / no_vertexes;
         float temp_rad = 0;
-        float x , y , z = 0f;
+        float x , y = 0f;
 
         mv.beginShape();
         for(int i = 0; i < points; ++i) {
