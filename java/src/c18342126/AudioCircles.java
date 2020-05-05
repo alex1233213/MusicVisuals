@@ -26,6 +26,7 @@ public class AudioCircles {
         
         mv.beginShape();
         for(int i = 0; i < mv.getAudioBuffer().size(); ++i) {
+            mv.stroke(PApplet.map(i, 0, mv.getAudioBuffer().size(), 0, 255), 255, 255);
             float angle = PApplet.map(i, 0, mv.getAudioBuffer().size(), 0, PApplet.TWO_PI);
             float offset = PApplet.map(mv.getAudioBuffer().get(i),
                                  -1, 1, -radius * 0.15f, radius * 0.15f);
@@ -55,7 +56,6 @@ public class AudioCircles {
         mv.translate(mv.width / 2, mv.height / 2);
         
         for(int i= 0 ; i < mv.getBands().length; ++i) {
-            mv.stroke(PApplet.map(i, 0, mv.getBands().length, 0, 255), 255, 255);
             createAudioCircle(mv.getSmoothedBands()[i] * 10);
         }
         
