@@ -15,13 +15,14 @@ public class Cubes {
         this.mv = mv;
         locations = new PVector[no_cubes];
         
+        //initialise the locations of cubes
         for(int i = 0; i < no_cubes; ++i) {
             float angle = PApplet.map(i, 0, no_cubes, 0, PApplet.TWO_PI);
             float gap = PApplet.map(i , 0, no_cubes , 400, mv.height / 2);
             float x = PApplet.cos(angle) * gap;
             float y = PApplet.sin(angle) * gap;
             
-            locations[i] = new PVector(x, y);
+            locations[i] = new PVector(x, y, 120);
         }
     }
 
@@ -36,12 +37,17 @@ public class Cubes {
             mv.fill(PApplet.map(i, 0, no_cubes, 0, 255), 255, 255);
             float length = PApplet.map(i, 0, no_cubes, 30, mv.getAmplitude() * 100);
             mv.pushMatrix();
-            mv.translate(mv.width / 2 + this.locations[i].x, mv.height / 2 + this.locations[i].y);
+            mv.translate(mv.width / 2 + this.locations[i].x, 
+                            mv.height / 2 + this.locations[i].y,
+                            this.locations[i].z);
+
             mv.rotateY(angle);
             mv.rotateZ(angle); 
             mv.rotateX(angle);
             mv.box(length);
             angle += 0.001;
+
+            //rotate cubes around the center based on amplitude
             this.locations[i].rotate(PApplet.radians(-mv.getAmplitude() * 5));
             mv.popMatrix();
         }

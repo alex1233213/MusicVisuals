@@ -9,10 +9,16 @@ public class Triangles {
 
     public Triangles(My_Visual mv) {
         this.mv = mv;
+
+        //angle of rotation
         angle = 0;
     }
 
     
+
+    //method which creates a triangle
+    //dist parameter reffers to distance from centre
+    //around which points are created
     public void createTriangle(float dist) {
         int points = 3;
         float theta = 0;
@@ -46,6 +52,7 @@ public class Triangles {
         mv.pushMatrix();
         mv.translate(mv.width / 2, mv.height /2);
         
+        //for each audio band create a triangle and rotate 
         for(int i = 0 ; i < mv.getBands().length ; ++i) {
             mv.stroke(PApplet.map(i, 0, mv.getBands().length, 0 , 255),255, 255);
             mv.rotate(PApplet.radians(angle));

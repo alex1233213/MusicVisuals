@@ -11,12 +11,12 @@ public class Spheres {
     }
 
 
-    public void setup() {
-        mv.setFrameSize(2048);
-    }
-
 
     public void render() {
+        mv.strokeWeight(1f);
+        mv.stroke(0);
+        
+        //for each audio band a sphere will get drawn in centre of screen
         for(int i=0; i < mv.getBands().length ; ++i ) {
             mv.fill(PApplet.map(i, 0, mv.getAmplitude() * 100, 0, 255), 255, 255);
             mv.pushMatrix();
