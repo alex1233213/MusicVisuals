@@ -48,27 +48,6 @@ public class Cubes {
         
 
 
-        // //create cube
-        // mv.pushMatrix();
-        // mv.translate(mv.width / 2 - this.location.x, mv.height / 2 - this.location.y);
-        // mv.rotateY(angle);
-        // mv.rotateZ(angle); 
-        // mv.rotateX(angle);
-        // mv.box(40);
-        // angle += 0.1;
-        // this.location.rotate(PApplet.radians(mv.getAmplitude() * 5));
-        // mv.popMatrix();
-
-
-        // //create cube
-        // mv.pushMatrix();
-        // mv.translate(mv.width / 2 + this.location.x * 2, mv.height / 2 - this.location.y);
-        // mv.rotateY(angle);
-        // mv.rotateZ(angle); 
-        // mv.rotateX(angle);
-        // mv.box(40);
-        // angle += 0.1;
-        // this.location.rotate(PApplet.radians(mv.getAmplitude() * 5));
-        // mv.popMatrix();
+        
     }
 }

@@ -51,10 +51,10 @@ public class My_Visual extends Visual {
             calculateAverageAmplitude(); 
             
             
-            // star.render();
-            // spheres.render();
-            // audio_circles.render();
-            // triangles.render();
+            star.render();
+            spheres.render();
+            audio_circles.render();
+            triangles.render();
             cubes.render();
         }
         catch(VisualException e)
