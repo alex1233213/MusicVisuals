@@ -30,7 +30,6 @@ public class Triangles {
             theta += thetaRot;
         }
         mv.endShape(PApplet.CLOSE);
-        
     }
 
 
@@ -54,6 +53,5 @@ public class Triangles {
             angle += 0.05;
         }
         mv.popMatrix();
-        
     }
 }

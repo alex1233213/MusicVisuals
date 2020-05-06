@@ -7,6 +7,7 @@ public class My_Visual extends Visual {
     Triangles triangles;
     Spheres spheres;
     AudioCircles audio_circles;
+    Cubes cubes;
 
     public void settings() {
         size(1200, 800, P3D);
@@ -23,6 +24,7 @@ public class My_Visual extends Visual {
         triangles = new Triangles(this);
         spheres  = new Spheres(this);        
         audio_circles = new AudioCircles(this);
+        cubes = new Cubes(this);
     }
 
 
@@ -49,10 +51,11 @@ public class My_Visual extends Visual {
             calculateAverageAmplitude(); 
             
             
-            star.render();
-            spheres.render();
-            audio_circles.render();
-            triangles.render();
+            // star.render();
+            // spheres.render();
+            // audio_circles.render();
+            // triangles.render();
+            cubes.render();
         }
         catch(VisualException e)
         {
