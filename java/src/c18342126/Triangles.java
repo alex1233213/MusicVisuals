@@ -31,8 +31,8 @@ public class Triangles {
             float offset = PApplet.map(mv.getAudioBuffer().get(i),
                                  -0.5f, 0.5f, -dist * 0.05f, dist * 0.05f);
 
-            x = PApplet.cos(theta) * ((dist - dist *0.1f) + offset);
-            y = PApplet.sin(theta) * ((dist - dist *0.1f) + offset);
+            x = PApplet.cos(theta) *dist;
+            y = PApplet.sin(theta) * dist;
             
 
             mv.vertex(x, y);
