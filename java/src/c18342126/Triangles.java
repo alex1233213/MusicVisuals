@@ -27,9 +27,12 @@ public class Triangles {
         
         mv.beginShape();
         
-        for(int i = 0; i < points; ++i) {
-            x = PApplet.cos(theta) * dist;
-            y = PApplet.sin(theta) * dist;
+        for(int i = 0; i < mv.getAudioBuffer().size(); ++i) {
+            float offset = PApplet.map(mv.getAudioBuffer().get(i),
+                                 -0.5f, 0.5f, -dist * 0.05f, dist * 0.05f);
+
+            x = PApplet.cos(theta) * ((dist - dist *0.1f) + offset);
+            y = PApplet.sin(theta) * ((dist - dist *0.1f) + offset);
             
 
             mv.vertex(x, y);
