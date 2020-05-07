@@ -1,5 +1,7 @@
 package c18342126;
 
+import java.util.ArrayList;
+
 import processing.core.*;
 
 public class AudioCircles {
@@ -15,29 +17,33 @@ public class AudioCircles {
 
 
 
-    public void setup() {
-        mv.setFrameSize(64);
-    }
-
+    
 
 
     public void createAudioCircle(float radius) {
         float x, y;
-        
-        mv.beginShape();
-        for(int i = 0; i < mv.getAudioBuffer().size(); ++i) {
-            mv.stroke(PApplet.map(i, 0, mv.getAudioBuffer().size(), 0, 255), 255, 255);
-            float angle = PApplet.map(i, 0, mv.getAudioBuffer().size(), 0, PApplet.TWO_PI);
-            float offset = PApplet.map(mv.getAudioBuffer().get(i),
-                                 -1, 1, -radius * 0.15f, radius * 0.15f);
-            
-            x = radius * PApplet.cos(angle);
-            y = radius *  PApplet.sin(angle);
+        int reduceRatio = PApplet.floor(mv.getAudioBuffer().size() / 350);
+        ArrayList <Float> reducedBuffer = new ArrayList <Float> ();
 
-            mv.vertex(x + offset, y + offset);
-            
+
+        for(int i = 0; i < 350; ++i) {
+            reducedBuffer.add(mv.getAudioBuffer().get(i * reduceRatio) );
         }
-        mv.endShape(PApplet.CLOSE);
+        
+        
+
+        for(int i = 0; i < reducedBuffer.size(); ++i) {
+            
+            mv.stroke(PApplet.map(i, 0, reducedBuffer.size(), 0, 255), 255, 255);
+            float angle = PApplet.map(i, 0, reducedBuffer.size(), 0, PApplet.TWO_PI);
+            float offset = PApplet.map(reducedBuffer.get(i),
+                                 -0.5f, 0.5f, -radius * 0.05f, radius * 0.05f);
+            
+            x = ((radius - radius *0.1f) + offset) * PApplet.cos(angle);
+            y = ((radius - radius *0.1f) + offset) *  PApplet.sin(angle);
+
+            mv.line(x, y, x + offset, y + offset);
+        }
     }
 
 
@@ -47,7 +53,7 @@ public class AudioCircles {
 
     public void render() {
         mv.noFill();
-        mv.strokeWeight(4f);
+        mv.strokeWeight(1.5f);
         mv.noFill();
 
         
