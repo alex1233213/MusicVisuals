@@ -34,7 +34,7 @@ Below is an example of visual constructors being called in the setup() method
 These constructors create the visuals which are drawn in the draw() method.
 
 
-#Controls
+## Controls
 
 In order to toggle on or off the visuals, input from the keyboard is read.
 For each visual there is a different button. 
@@ -83,8 +83,10 @@ public void keyPressed()
     }
 ```
 
-#How to run
 
+
+
+## How to run
 There are 5 visuals which I created :
 - Star, toggled with 1.
 - Triangles, toggled with 2.
@@ -111,8 +113,7 @@ I am proud of the new things I have learned and experience gained which includes
 -Creating visuals which were not covered in class.
 
 
-#The video below shows the output of the program
-
+## The video below shows the output of the program
 [![Audio Visualiser]](https://youtu.be/h-jel802NNY)
 ![Visual](/data/Untitled.png)
 
