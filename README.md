@@ -88,11 +88,11 @@ public void keyPressed()
 
 ## How to run
 There are 5 visuals which I created :
-- Star, toggled with 1.
-- Triangles, toggled with 2.
-- Spheres, toggled with 3.
-- Audio Circles, toggled with 4.
-- Cubes, toggled with 5.
+-Star, toggled with 1.
+-Triangles, toggled with 2.
+-Spheres, toggled with 3.
+-Audio Circles, toggled with 4.
+-Cubes, toggled with 5.
 
 In order to start playing the music, the space key is pressed.
 
@@ -115,7 +115,7 @@ I am proud of the new things I have learned and experience gained which includes
 
 ## The video below shows the output of the program
 [![Audio Visualiser]](https://youtu.be/h-jel802NNY)
-![Visual](/data/Untitled.png)
+![Visual](https://github.com/alex1233213/MusicVisuals/tree/master/java/data/Untitled.png)
 
 
 
