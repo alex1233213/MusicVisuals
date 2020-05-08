@@ -111,10 +111,11 @@ I am proud of the new things I have learned and experience gained which includes
 - Using cos(), sin() and vertex() to create vertices around a point(rotating).
 - Managing classes using inheritance and polymorphism.
 - Creating visuals which were not covered in class.
+- Becoming familiar with markdown in github.
 
 
 ## The video below shows the output of the program
-[Link to video](https://youtu.be/h-jel802NNY)
 
+[![Link to video](https://github.com/alex1233213/MusicVisuals/blob/master/java/data/Untitled.png)] (https://youtu.be/h-jel802NNY)
 
 
