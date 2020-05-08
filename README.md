@@ -88,11 +88,11 @@ public void keyPressed()
 
 ## How to run
 There are 5 visuals which I created :
--Star, toggled with 1.
--Triangles, toggled with 2.
--Spheres, toggled with 3.
--Audio Circles, toggled with 4.
--Cubes, toggled with 5.
+- Star, toggled with 1.
+- Triangles, toggled with 2.
+- Spheres, toggled with 3.
+- Audio Circles, toggled with 4.
+- Cubes, toggled with 5.
 
 In order to start playing the music, the space key is pressed.
 
@@ -105,12 +105,12 @@ From this assignment , I have gained a lot of experience in processing
 programming.
 
 I am proud of the new things I have learned and experience gained which includes : 
--Using vectors to implement motion of objects.
--In more depth understanding of sound waves and using the data from sound.
--Creating custom shapes using beginShape(), endShape() and vertex() methods.
--Using cos(), sin() and vertex() to create vertices around a point(rotating).
--Managing classes using inheritance and polymorphism.
--Creating visuals which were not covered in class.
+- Using vectors to implement motion of objects.
+- In more depth understanding of sound waves and using the data from sound.
+- Creating custom shapes using beginShape(), endShape() and vertex() methods.
+- Using cos(), sin() and vertex() to create vertices around a point(rotating).
+- Managing classes using inheritance and polymorphism.
+- Creating visuals which were not covered in class.
 
 
 ## The video below shows the output of the program
