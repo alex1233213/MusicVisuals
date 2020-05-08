@@ -32,7 +32,7 @@ public class Star {
             for(int j = 0; j < 2; ++j) {
                 temp_rad = inner_rad;
 
-                //every second vertex is drawn from the outer radius
+                //first iteration will be outer radius
                 if(j % 2 == 0) {
                     temp_rad = outer_rad;
                 }

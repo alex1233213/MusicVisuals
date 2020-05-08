@@ -35,7 +35,10 @@ public class Cubes {
         //create cubes at location vectors and rotate them
         for(int i = 0 ; i < no_cubes; ++i) {
             mv.fill(PApplet.map(i, 0, no_cubes, 0, 255), 255, 255);
+
+            //length of sides of cubes
             float length = PApplet.map(i, 0, no_cubes, 30, mv.getAmplitude() * 100);
+
             mv.pushMatrix();
             mv.translate(mv.width / 2 + this.locations[i].x, 
                             mv.height / 2 + this.locations[i].y,
@@ -51,9 +54,5 @@ public class Cubes {
             this.locations[i].rotate(PApplet.radians(-mv.getAmplitude() * 5));
             mv.popMatrix();
         }
-        
-
-
-        
     }
 }
