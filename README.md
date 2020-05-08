@@ -114,8 +114,7 @@ I am proud of the new things I have learned and experience gained which includes
 
 
 ## The video below shows the output of the program
-[![Audio Visualiser]](https://youtu.be/h-jel802NNY)
-![Visual](https://github.com/alex1233213/MusicVisuals/tree/master/java/data/Untitled.png)
+[Link to video](https://youtu.be/h-jel802NNY)
 
 
 
