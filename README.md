@@ -35,6 +35,7 @@ These constructors create the visuals which are drawn in the draw() method.
 
 
 ##Controls
+
 In order to toggle on or off the visuals, input from the keyboard is read.
 For each visual there is a different button. 
 The keyPressed() method is used to detect the event that any of the 
@@ -83,6 +84,7 @@ public void keyPressed()
 ```
 
 ##How to run
+
 There are 5 visuals which I created :
 - Star, toggled with 1.
 - Triangles, toggled with 2.
